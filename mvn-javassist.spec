@@ -4,19 +4,22 @@
 #
 Name     : mvn-javassist
 Version  : el.3.18.1
-Release  : 2
+Release  : 3
 URL      : https://github.com/jboss-javassist/javassist/archive/rel_3_18_1_ga.tar.gz
 Source0  : https://github.com/jboss-javassist/javassist/archive/rel_3_18_1_ga.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar
 Source2  : https://repo1.maven.org/maven2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.pom
-Source3  : https://repo1.maven.org/maven2/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar
-Source4  : https://repo1.maven.org/maven2/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.pom
+Source3  : https://repo1.maven.org/maven2/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.jar
+Source4  : https://repo1.maven.org/maven2/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.pom
+Source5  : https://repo1.maven.org/maven2/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar
+Source6  : https://repo1.maven.org/maven2/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MPL-1.1
 Requires: mvn-javassist-data = %{version}-%{release}
 Requires: mvn-javassist-license = %{version}-%{release}
 BuildRequires : apache-ant
+BuildRequires : apache-maven
 BuildRequires : buildreq-mvn
 
 %description
@@ -57,11 +60,17 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.18.1-GA
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.19.0-GA
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.19.0-GA
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.pom
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.pom
 
 
 %files
@@ -71,6 +80,8 @@ cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar
 /usr/share/java/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.pom
+/usr/share/java/.m2/repository/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.jar
+/usr/share/java/.m2/repository/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.pom
 /usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar
 /usr/share/java/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.pom
 
