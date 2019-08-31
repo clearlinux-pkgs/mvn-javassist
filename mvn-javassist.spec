@@ -4,7 +4,7 @@
 #
 Name     : mvn-javassist
 Version  : el.3.18.1
-Release  : 4
+Release  : 5
 URL      : https://github.com/jboss-javassist/javassist/archive/rel_3_18_1_ga.tar.gz
 Source0  : https://github.com/jboss-javassist/javassist/archive/rel_3_18_1_ga.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar
