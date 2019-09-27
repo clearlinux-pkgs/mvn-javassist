@@ -4,7 +4,7 @@
 #
 Name     : mvn-javassist
 Version  : el.3.18.1
-Release  : 7
+Release  : 8
 URL      : https://github.com/jboss-javassist/javassist/archive/rel_3_18_1_ga.tar.gz
 Source0  : https://github.com/jboss-javassist/javassist/archive/rel_3_18_1_ga.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar
@@ -17,6 +17,8 @@ Source7  : https://repo1.maven.org/maven2/org/javassist/javassist/3.22.0-GA/java
 Source8  : https://repo1.maven.org/maven2/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA.pom
 Source9  : https://repo1.maven.org/maven2/org/javassist/javassist/3.23.0-GA/javassist-3.23.0-GA.jar
 Source10  : https://repo1.maven.org/maven2/org/javassist/javassist/3.23.0-GA/javassist-3.23.0-GA.pom
+Source11  : https://repo1.maven.org/maven2/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar
+Source12  : https://repo1.maven.org/maven2/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MPL-1.1
@@ -88,6 +90,12 @@ cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.23.0-GA
 cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.23.0-GA/javassist-3.23.0-GA.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.24.0-GA
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.24.0-GA
+cp %{SOURCE12} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -104,6 +112,8 @@ cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/javassist/javassis
 /usr/share/java/.m2/repository/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA.pom
 /usr/share/java/.m2/repository/org/javassist/javassist/3.23.0-GA/javassist-3.23.0-GA.jar
 /usr/share/java/.m2/repository/org/javassist/javassist/3.23.0-GA/javassist-3.23.0-GA.pom
+/usr/share/java/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar
+/usr/share/java/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.pom
 
 %files license
 %defattr(0644,root,root,0755)
